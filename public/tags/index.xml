@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Iván Martínez</title>
-    <link>https://imartinezcuevas.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Iván Martínez</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://imartinezcuevas.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
-      <link>https://imartinezcuevas.github.io/tags/ai/</link>
-      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://imartinezcuevas.github.io/tags/ai/</guid>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Artificial Intelligence</title>
-      <link>https://imartinezcuevas.github.io/tags/artificial-intelligence/</link>
-      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://imartinezcuevas.github.io/tags/artificial-intelligence/</guid>
+      <link>http://localhost:1313/tags/artificial-intelligence/</link>
+      <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/artificial-intelligence/</guid>
       <description></description>
     </item>
     <item>
       <title>Linear Regression</title>
-      <link>https://imartinezcuevas.github.io/tags/linear-regression/</link>
-      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://imartinezcuevas.github.io/tags/linear-regression/</guid>
+      <link>http://localhost:1313/tags/linear-regression/</link>
+      <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/linear-regression/</guid>
       <description></description>
     </item>
     <item>
       <title>Machine Learning</title>
-      <link>https://imartinezcuevas.github.io/tags/machine-learning/</link>
-      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://imartinezcuevas.github.io/tags/machine-learning/</guid>
+      <link>http://localhost:1313/tags/machine-learning/</link>
+      <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/machine-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>https://imartinezcuevas.github.io/tags/python/</link>
-      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://imartinezcuevas.github.io/tags/python/</guid>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
     </item>
   </channel>

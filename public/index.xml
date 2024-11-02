@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Iván Martínez</title>
-    <link>https://imartinezcuevas.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home on Iván Martínez</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://imartinezcuevas.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linear Regression</title>
-      <link>https://imartinezcuevas.github.io/posts/linear-regression/</link>
-      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://imartinezcuevas.github.io/posts/linear-regression/</guid>
+      <link>http://localhost:1313/posts/linear-regression/</link>
+      <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linear-regression/</guid>
       <description>A comprehensive introduction to linear regression, exploring its fundamental concepts and mathematical foundations.</description>
     </item>
     <item>
       <title>About</title>
-      <link>https://imartinezcuevas.github.io/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://imartinezcuevas.github.io/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;I got a Bachelor’s degree and Master&amp;rsquo;s degree from the &lt;a href=&#34;https://www.um.es/&#34;&gt;University of Murcia&lt;/a&gt;. Currently,&#xA;I work as a Data Scientist at &lt;a href=&#34;https://prosur.es/es/inicio/&#34;&gt;Prosur&lt;/a&gt;, Murcia.&lt;/p&gt;&#xA;&lt;p&gt;Throughout my undergraduate studies, I was captivated by courses that introduced me to the principles of data analysis, machine learning, and statistical modeling. These courses ignited my enthusiasm for uncovering hidden patterns and insights from complex datasets, and I actively sough opportunities to apply these concepts to real-world problems.&lt;/p&gt;</description>
     </item>
   </channel>

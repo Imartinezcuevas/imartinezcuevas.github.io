@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Artificial Intelligence on Iván Martínez</title>
-    <link>https://imartinezcuevas.github.io/tags/artificial-intelligence/</link>
+    <link>http://localhost:1313/tags/artificial-intelligence/</link>
     <description>Recent content in Artificial Intelligence on Iván Martínez</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://imartinezcuevas.github.io/tags/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linear Regression</title>
-      <link>https://imartinezcuevas.github.io/posts/linear-regression/</link>
-      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://imartinezcuevas.github.io/posts/linear-regression/</guid>
+      <link>http://localhost:1313/posts/linear-regression/</link>
+      <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linear-regression/</guid>
       <description>A comprehensive introduction to linear regression, exploring its fundamental concepts and mathematical foundations.</description>
     </item>
   </channel>

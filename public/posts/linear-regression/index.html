@@ -2,19 +2,19 @@
 <html lang="en-us"
   dir="ltr">
 
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
 
 
-<link rel="icon" type="image/ico" href="https://imartinezcuevas.github.io//favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://imartinezcuevas.github.io//favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://imartinezcuevas.github.io//favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="https://imartinezcuevas.github.io//android-chrome-192x192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://imartinezcuevas.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
 
-<meta name="description" content="An in-depth guide to linear regression, starting from basic principles and covering key concepts. The aim is to build a strong foundational understanding of this essential machine learning algorithm."/>
+<meta name="description" content="An in-depth guide to linear regression, covering basic principles and key concepts to build a strong foundational understanding of this essential machine learning algorithm."/>
 
 <title>
     
@@ -22,7 +22,7 @@
     
 </title>
 
-<link rel="canonical" href="https://imartinezcuevas.github.io/posts/linear-regression/"/>
+<link rel="canonical" href="http://localhost:1313/posts/linear-regression/"/>
 
 
 
@@ -36,10 +36,6 @@
 
 
 <link rel="stylesheet" href="/assets/combined.min.a6824bbee0d90d5af09fed9b70395ce7076b615e315037455d903314e96ef91b.css" media="all">
-
-
-
-
 
 
 
@@ -104,12 +100,12 @@
       
       
       
-      <time datetime="2024-10-27T00:00:00&#43;00:00">27 Oct 2024</time>
+      <time datetime="2024-11-02T00:00:00&#43;00:00">2 Nov 2024</time>
       
 
       
       &nbsp; · &nbsp;
-      0 min read
+      6 min read
       
     </p>
 
@@ -122,14 +118,124 @@
   
   <aside class="toc">
     <p><strong>Table of contents</strong></p>
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-linear-regression">What is Linear Regression?</a>
+      <ul>
+        <li><a href="#a-closer-look">A Closer Look</a></li>
+      </ul>
+    </li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="#regularization">Regularization</a>
+      <ul>
+        <li><a href="#l2-and-l1-penalties-in-linear-regression">L2 and L1 Penalties in Linear Regression</a></li>
+      </ul>
+    </li>
+    <li><a href="#limitations-of-linear-regression">Limitations of Linear Regression</a></li>
+  </ul>
+</nav>
   </aside>
   
 
   
 
   <div class="single-content">
-    
+    <h2 id="what-is-linear-regression">What is Linear Regression?</h2>
+<p>Linear regression is one of the most important and widely used regression techniques. It is a statistical method used to model relationships between variables, specifically when there is a linear relationship between them.</p>
+<h3 id="a-closer-look">A Closer Look</h3>
+<p>Linear regression is a supervised algorithm that learns to model a dependent variable, $ y $, as a function of some independent variables (often called &lsquo;features&rsquo;), $ x_i $, by identifying the line or surface that best fits the data. In general, the equation for linear regression is:</p>
+<p>$$ y = b + w_1 \cdot x_1 + w_2 \cdot x_2 + \dots + w_i \cdot x_i $$</p>
+<p>where:</p>
+<ul>
+<li>$ y $: the dependent variable, or what we aim to predict.</li>
+<li>$ x_i $: the independent variables, or the features the model uses to predict $ y $.</li>
+<li>$ b $: the y-intercept of the regression line.</li>
+<li>$ w_i $: the weights or coefficients the model learns during optimization.</li>
+</ul>
+<p>The simplest linear regression model can be represented graphically as a best-fit line between data points, while a multiple linear regression model can be represented as a plane (in 2 dimensions) or a hyperplane (in higher dimensions). Despite their differences, both simple and multiple regression models are linear, as they take the form of a linear equation.</p>
+<h2 id="training">Training</h2>
+<p>Training a linear regression model involves finding the set of weights that best predict $ y $ based on the features. Although we may not know the true parameters, we can estimate them. Once these coefficients, $ \hat{w}_i $, are estimated, we can predict future values, $ \hat{y} $, as follows:</p>
+<p>$$
+\hat{y} = \hat{w}_1 \cdot x_1 + \hat{w}_2 \cdot x_2 + \dots + \hat{w}_i \cdot x_i
+$$</p>
+<p>The process for estimating these parameters involves the following steps:</p>
+<ol>
+<li><strong>Random weight initialization</strong>: $ w_i $ is initially unknown, so we begin by setting random values for the weights or initializing them to 0.</li>
+<li><strong>Generate predictions</strong>: Use the initialized weights in the equation to predict outcomes for each observation.</li>
+<li><strong>Calculate the loss</strong>: Compute the Residual Sum of Squares (RSS), which is the sum of squared differences between the actual and predicted values:
+$$
+\text{RSS} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+$$</li>
+<li><strong>Minimize the RSS</strong>: The model finds the best parameters by defining a cost function and minimizing it through a method like gradient descent.</li>
+</ol>
+<p>This process is repeated until the error reaches a minimum, and gradient descent cannot reduce the cost function further.</p>
+<h2 id="regularization">Regularization</h2>
+<p>Although linear regression may seem unlikely to overfit, as it models data with a single line (or hyperplane in higher dimensions), overfitting can still occur, especially when features are correlated or redundant.</p>
+<p>Consider two nearly identical features. This results in a predicted hyperplane of the form:
+$$
+\hat{y} = w_1 \cdot x_1 + w_2 \cdot x_2 + w_0
+$$</p>
+<p>If $ x_2 $ is nearly identical to $ x_1 $ (perhaps differing by a small multiplicative factor or some noise), both terms may be unnecessary. In such a case, a simpler model would be:
+$$
+\hat{y} = w_1 \cdot x_1 + w_0
+$$</p>
+<p>This simpler model is less complex and potentially more robust.</p>
+<p>The challenge is that identifying redundant features by inspection is often impractical. Ideally, the model would automatically prefer simpler representations when possible, as long as they fit the data adequately.</p>
+<p>To achieve this, we add a penalty term to the loss function. Two common options for these penalties are the L2 norm (Ridge regression) and the L1 norm (Lasso regression):</p>
+<ul>
+<li><strong>L2 norm</strong>: Adds the square of each weight to the loss function, discouraging large weights.</li>
+<li><strong>L1 norm</strong>: Adds the absolute values of the weights to the loss function, promoting sparsity by pushing some weights to zero.</li>
+</ul>
+<p>These penalties help the model avoid overfitting by favoring simpler, more generalizable solutions.</p>
+<h3 id="l2-and-l1-penalties-in-linear-regression">L2 and L1 Penalties in Linear Regression</h3>
+<h4 id="no-regularization-standard-linear-regression">No Regularization (Standard Linear Regression)</h4>
+<p>This is the basic linear regression model without any added regularization:</p>
+<p>$$
+L(w) = \sum_{i=1}^{n} (y_i - w \cdot x_i)^2
+$$</p>
+<h4 id="l2-regularization-ridge-regression">L2 Regularization (Ridge Regression)</h4>
+<p>By adding an L2 penalty term to the loss function, we implement <strong>L2 regularization</strong>:</p>
+<p>$$
+L(w) = \sum_{i=1}^{n} (y_i - w \cdot x_i)^2 + \lambda \sum_{j=0}^{d} w_j^2
+$$</p>
+<p>The <strong>L2 penalty</strong> includes the L2-norm of $ w $, and the resulting loss function is known as <strong>Ridge regression</strong>.</p>
+<h5 id="explanation">Explanation</h5>
+<p>We aim to minimize the loss function, so any additional terms (like penalties) are also minimized. Adding a penalty term encourages smaller weights. The first term represents how well the model fits the data, while the second term reduces the magnitude of the weights.</p>
+<p>The parameter $ \lambda $ (often denoted as $ \alpha $ in libraries like scikit-learn) adjusts the strength of the penalty:</p>
+<ul>
+<li>A very low $ \lambda $ value reduces the penalty effect, allowing for a more complex model.</li>
+<li>Setting $ \lambda = 0 $ results in the standard linear regression model.</li>
+<li>A high $ \lambda $ value simplifies the model, though it may reduce data fit quality.</li>
+</ul>
+<h5 id="choosing--lambda-">Choosing $ \lambda $</h5>
+<p>Choosing the appropriate $ \lambda $ value often requires experimentation. We typically try values in an exponential range (e.g., 0.01, 0.1, 1, 10) and select the one that minimizes the loss on a validation set or through k-fold cross-validation.</p>
+<h4 id="l1-regularization-lasso-regression">L1 Regularization (Lasso Regression)</h4>
+<p>Alternatively, we can apply the L1-norm to achieve <strong>L1 regularization</strong>:</p>
+<p>$$
+L(w) = \sum_{i=1}^{n} (y_i - w \cdot x_i)^2 + \lambda \sum_{j=0}^{d} |w_j|
+$$</p>
+<h5 id="explanation-1">Explanation</h5>
+<p>Lasso regression has a distinct effect: it promotes sparsity by setting some weights to zero, effectively performing feature selection. Unlike Ridge regression, however, it lacks a straightforward closed-form solution and is generally solved using optimization techniques.</p>
+<h2 id="limitations-of-linear-regression">Limitations of Linear Regression</h2>
+<p>While linear regression is a powerful and widely-used technique, it does have some limitations:</p>
+<ol>
+<li>
+<p><strong>Linear Relationships Only</strong>: Linear regression assumes a linear relationship between the dependent and independent variables. If the relationship is non-linear, linear regression may not capture it effectively, leading to poor predictions. In such cases, other algorithms like polynomial regression or neural networks may be more suitable.</p>
+</li>
+<li>
+<p><strong>Sensitivity to Outliers</strong>: Linear regression models are highly sensitive to outliers. A few extreme values can heavily influence the best-fit line, resulting in a model that does not generalize well to typical data points. Techniques like robust regression or removing outliers from the dataset can sometimes mitigate this.</p>
+</li>
+<li>
+<p><strong>Multicollinearity</strong>: When features are highly correlated, it can make the model unstable and challenging to interpret. Multicollinearity can lead to large swings in coefficient estimates with minor changes in the data. Ridge regression or principal component analysis (PCA) are often used to address multicollinearity.</p>
+</li>
+<li>
+<p><strong>Overfitting in High Dimensions</strong>: Linear regression can overfit when there are too many features relative to the number of observations. Regularization techniques like Lasso and Ridge regression help mitigate this, but in cases where the number of features is very large, it may be beneficial to use techniques like dimensionality reduction.</p>
+</li>
+<li>
+<p><strong>Assumption of Normally Distributed Errors</strong>: Linear regression assumes that residuals (errors) follow a normal distribution. If this assumption is violated, such as in the presence of skewed data, the model’s performance can degrade. In these cases, transformations of the dependent variable or using a non-linear model might improve results.</p>
+</li>
+</ol>
+
     
   </div>
 
