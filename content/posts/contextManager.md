@@ -1,6 +1,8 @@
 ---
 title: "Context Managers"
 date: "2025-06-16"
+summary: "A introduction to context managers."
+description: "Context managers mini-essay."
 toc: true
 readTime: true
 autonumber: true
@@ -9,6 +11,7 @@ tags: ["Python"]
 showTags: false
 ---
 
+## Introduction
 In Python, managing resources such as files, sockets or database connections is a common task. However, ensuring these resources are correctly acquired and released can quickly become error-prone. Context managers provide a structured and elegant solution to this problem.
 
 At its core, a context manager is a class that facilitates the setup and teardown of resources, abstracting the cleanup logic.
