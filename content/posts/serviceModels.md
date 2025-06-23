@@ -1,6 +1,6 @@
 ---
 title: "Service models available on the cloud"
-date: "2025-06-16"
+date: "2025-06-23"
 summary: "A introduction to the three service models available on the cloud."
 description: "Service models mini-essay."
 toc: true

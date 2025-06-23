@@ -1,6 +1,6 @@
 ---
 title: "Cloud computing"
-date: "2025-06-16"
+date: "2025-06-23"
 summary: "A introduction to Cloud computing."
 description: "Cloud computing mini-essay."
 toc: true

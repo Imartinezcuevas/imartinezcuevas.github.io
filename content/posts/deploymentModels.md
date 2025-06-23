@@ -1,6 +1,6 @@
 ---
 title: "Deployment models for cloud"
-date: "2025-06-16"
+date: "2025-06-23"
 summary: "A introduction to deployment models for cloud."
 description: "Deployment models mini-essay."
 toc: true
