@@ -1,12 +1,12 @@
 # Chirpy Starter
 
-# 🧠 Personal Portfolio & Blog
+# Personal Portfolio & Blog
 
 This is my personal website, a place where I document everything I learn while building real-world AI systems.
 
 ---
 
-## 📚 Tech Stack
+## Tech Stack
 
 - **Jekyll** + **Chirpy** theme
 - Hosted with **GitHub Pages**
@@ -14,7 +14,7 @@ This is my personal website, a place where I document everything I learn while b
 
 ---
 
-## 👋 About Me
+## About Me
 
 I'm currently studying mathematics, artificial intelligence, and system design. I build to learn and I write to share.
 
