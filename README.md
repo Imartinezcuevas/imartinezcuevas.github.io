@@ -1,8 +1,5 @@
 # Chirpy Starter
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
-
 # 🧠 Personal Portfolio & Blog
 
 This is my personal website, a place where I document everything I learn while building real-world AI systems.
