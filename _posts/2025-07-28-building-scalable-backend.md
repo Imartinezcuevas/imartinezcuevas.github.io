@@ -3,8 +3,8 @@ title: "Building a Scalable Backend in Python: A Modular Monolith Approach"
 description: "How I approached building a scalable backend for a job matching platform"
 author: imartinezcuevas
 date: 2025-07-28 12:32:00 +0800
-categories: [AI, Backend]
-tags: [Backend, FastAPI, AI]
+categories: [JobMatching Project]
+tags: [Backend, FastAPI, AI, Design]
 ---
 
 ## Introduction

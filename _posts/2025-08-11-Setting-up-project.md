@@ -3,8 +3,8 @@ title: "Setting up a clean, scalable Python project"
 description: "How to set up a python project"
 author: imartinezcuevas
 date: 2025-08-11 12:44:00 +0800
-categories: [Backend]
-tags: [Backend]
+categories: [JobMatching Project]
+tags: [Backend, FastAPI, MongoDB, venv, pip, poetry, configuration]
 ---
 
 ## Introduction
