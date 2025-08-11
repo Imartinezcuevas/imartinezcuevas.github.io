@@ -174,8 +174,9 @@ async def root():
 With the project structure in place, Poetry managing dependencies, pre-commit hooks configured for quality, and MongoDB connected cleanly via Beanie and environment variables, we have a solid, scalable foundation ready to start real development.
 
 ## References 
-https://dev.to/leapcell/poetry-pip-venv-heres-why-developers-are-switching-5005
-https://medium.com/@deepakcoder80/why-i-choose-poetry-over-venv-for-managing-python-dependencies-95cd7eb50223
-https://medium.com/@pdx.lucasm/python-poetry-f8cbab0eef94
-https://dev.to/techishdeep/maximize-your-python-efficiency-with-pre-commit-a-complete-but-concise-guide-39a5
-https://medium.com/internet-of-technology/beautify-your-python-code-with-pre-commit-linters-a-step-by-step-guide-d63604d6120b
+
+* [Poetry > pip + venv? Here's why developers are switching](https://dev.to/leapcell/poetry-pip-venv-heres-why-developers-are-switching-5005)
+* [Why I choose Poetry over venv for managing python dependencies](https://medium.com/@deepakcoder80/why-i-choose-poetry-over-venv-for-managing-python-dependencies-95cd7eb50223)
+* [Pre-commit for Python](https://medium.com/@pdx.lucasm/python-poetry-f8cbab0eef94)
+* [https://medium.com/@pdx.lucasm/python-poetry-f8cbab0eef94](https://medium.com/internet-of-technology/beautify-your-python-code-with-pre-commit-linters-a-step-by-step-guide-d63604d6120b)
+* [The Power of Pre-Commit for Python Developers: Tips and Best Practices](https://dev.to/techishdeep/maximize-your-python-efficiency-with-pre-commit-a-complete-but-concise-guide-39a5)
