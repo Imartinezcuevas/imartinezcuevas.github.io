@@ -7,6 +7,9 @@ categories: [Reddit Analysis]
 tags: [FastAPI, Redis, RQ, Airflow, PostgreSQL, Docker, Prometheus, Sentiment Analysis, Python, Microservice]
 ---
 
+![Gif](/assets/post_imgs/building-reddit-sentiment-analyzer/animated.gif){: width="600" height="400" }
+
+
 This project implements a scalable microservices platform for ingesting, analyzing, and correcting Reddit posts to generate sentiment-labeled datasets. The platform uses FastAPI, RQ, Redis, PostgreSQL, Docker, Airflow, and Prometheus, providing a robus, observable, and asynchronous system. This article describes the work done, encountered challenges and technicals solutions.
 
 ![Diagram](/assets/post_imgs/building-reddit-sentiment-analyzer/high-level-diagram.png){: width="500" height="600" }
