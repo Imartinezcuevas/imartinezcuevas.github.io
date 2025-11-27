@@ -1,10 +1,10 @@
 ---
 title: "Building a Reddit sentiment analysis platform"
-description: ""
+description: "A full end-to-end microservices system to fetch Reddit data and analyze sentiment."
 author: imartinezcuevas
 date: 2025-11-27 11:39:00 +0800
-categories: [Reddit sentiment analysis]
-tags: [FastAPI, PostgreSQL, ]
+categories: [Reddit Analysis]
+tags: [FastAPI, Redis, RQ, Airflow, PostgreSQL, Docker, Prometheus, Sentiment Analysis, Python, Microservice]
 ---
 
 This project implements a scalable microservices platform for ingesting, analyzing, and correcting Reddit posts to generate sentiment-labeled datasets. The platform uses FastAPI, RQ, Redis, PostgreSQL, Docker, Airflow, and Prometheus, providing a robus, observable, and asynchronous system. This article describes the work done, encountered challenges and technicals solutions.
@@ -19,8 +19,8 @@ The system consists of several independent services, orchestrated to handle inge
     * Implements Redis caching for results and job deduplication.
     * Provides `/metrics` and `/health` endpoints for observability.
 
-    ![Diagram](/assets/post_imgs/building-reddit-sentiment-analyzer/api-gateway-diagram.png){: width="500" height="600" }
-    _Diagram zoomed into API Gateway showing endpoints, caching layer, and Redis locks_
+![Diagram](/assets/post_imgs/building-reddit-sentiment-analyzer/api-gateway-diagram.png){: width="800" height="600" }
+ _Diagram zoomed into API Gateway showing endpoints, caching layer, and Redis locks_
 
 2. Reddit Ingestor (asyncpraw + FastAPI worker)
     * Fetches posts asynchronously, normalizing content for downstream processing.
