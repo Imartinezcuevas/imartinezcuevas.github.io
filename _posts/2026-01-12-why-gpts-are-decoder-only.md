@@ -31,7 +31,7 @@ Once you understand this, the usual encoder-decoder framing starts to feel unnec
 The constraints imposed by next-token prediction are strict:
 * The model must be causal.
 * It must not access future tokens.
-* It must learn the conditional distribution $P(x_t | x_{<t})$, not an easier version that leaks future information during training.
+* It must learn the conditional distribution $P(x_t \| x_{<t})$, not an easier version that leaks future information during training.
 
 With this on the table, the architecture choices stop being arbitrary. Causal masking, autoregressive factorization, and the absence of an encoder aren't optimizations or simplifications, they're consequences.
 
@@ -41,7 +41,7 @@ At training time, we already have access to the full sequence. Every token is kn
 
 The answer is simple but fundamental: because that would change the problem.
 
-The goal of a language model is to learn the conditional distribution $P(x_t | x_{<t})$. If the model is allowed to see future tokens during training, it will learn a different and easier distribution $P(x_t | x_{<t}, x_{>t})$. This may produce lower training loss, but it breaks the model.
+The goal of a language model is to learn the conditional distribution $P(x_t \| x_{<t})$. If the model is allowed to see future tokens during training, it will learn a different and easier distribution $P(x_t \| x_{<t}, x_{>t})$. This may produce lower training loss, but it breaks the model.
 
 During inference, future tokens don't exist. The model must generate one token at a time, relying only on past context. If training allows access to future information, the model learns dependencies it will never be able to use in production.
 
