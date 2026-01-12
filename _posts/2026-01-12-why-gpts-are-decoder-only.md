@@ -5,6 +5,7 @@ author: imartinezcuevas
 date: 2026-01-12 11:39:00 +0800
 categories: [NanoLLM]
 tags: [GPT, Deep Learning, Transformer, ML]
+math: true
 ---
 
 Many people read ["Attention is all you need"](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) and assume that modern GPT models follow the same encoder-decoder architecture. They don't.
