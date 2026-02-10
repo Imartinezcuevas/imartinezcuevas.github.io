@@ -20,7 +20,7 @@ I implemented and tested the six most popular prompt engineering paradigms:
 ## Findings
 Here is everything I learned about the limits of prompt engineering.
 
-### Zero-shot prompting
+### 1. Zero-shot prompting
 This is the baseline. You give the model a claim and ask for a verdict. No context, no examples, no "thinking".
 
 *Prompt: "Claim: [X]. Verify if this supports, refutes or not enough info.*
@@ -31,7 +31,7 @@ This is the baseline. You give the model a claim and ask for a verdict. No conte
 
 Zero-shot proved that you can't use an LLM as a database.
 
-### Chain-of-Thought
+### 2. Chain-of-Thought
 Introduced by Google, CoT asks the model to generate a reasoning trace before answering.
 
 *Prompt: "Verify the claim. Think step-by-step and explain your reasoning.*
@@ -43,7 +43,7 @@ I expected a jump in accuracy. I got a jump in "coherence", but not in correctne
 
 CoT improves reasoning reliability, not fact retrieval. It helps the model connect A to B, but if it remembers A incorrectly, the chain of though just reinforces the error.
 
-### Self-Consistency
+### 3. Self-Consistency
 Instead of asking once, we sample the CoT prompt 5 times at a higher temperature and take the majority vote. The theory is that hallucinations are random, while truth is consistent.
 
 #### The problems encountered
@@ -52,14 +52,14 @@ Instead of asking once, we sample the CoT prompt 5 times at a higher temperature
 
 Self-consistency filters out random noise, but it can't fix systematic erros in the model's weights. It's a "denoising" technique, not a "fact-checking" one.
 
-### Decomposition
+### 4. Decomposition
 For complex claims, we break them down into atomic facts. This was the hardest technique to implement.
 
 #### The problems encountered
 * The window grows significantly. By the time the model answers Q1 and Q2, it has forgotten the original instruction or the format it was supposed to follow.
 * Sometimes the model would decompose a question into the same question rephrased. This added latency without adding value.
 
-### RAG
+### 5. RAG
 This is the industry standard. We search a database (or the web), retrieve the top-k chunks, paste them into the prompt, ans ask the model to verify.
 RAG solved the "knowledge cutoff" problem, but introduced a new one: distractions.
 
@@ -70,7 +70,7 @@ RAG solved the "knowledge cutoff" problem, but introduced a new one: distraction
 
 RAG is as good as your retrieval algorithm. If I had to do it for another project, I will expend more time on the search, implementing re-ranking and noise filtering.
 
-### ReAct Agent
+### 6. ReAct Agent
 The ReAct (Reasoning + Acting) allows the model to "speak" to the python environment. It generates a "Thought", then an "Action" (search), waits for an "Observation", and loops.
 
 This was the most promising but also the most frustrating technique. It turned a text generation problem into a control systems problem.
